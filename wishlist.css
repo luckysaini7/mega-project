@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 150px;
+}
+.logo  img{
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 4px;
+    height: 8vh;
+}
+
+.fav-btn{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.fav-btn > i{
+    color: orange;
+}
+.fav-btn  a{
+    color: orange;
+    font-size: large;
+    margin-right: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+main{
+    margin-top: 2.5rem;
+}
+
+.message{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+table{
+    width: 100%;
+    text-align: center;
+    border : 2px solid grey;
+    border-collapse: collapse;
+}
+thead{
+    border-bottom: 2px solid grey;
+}
+td,th{
+    padding: 20px;
+}
+tbody > tr{
+    cursor: pointer;
+}
+tbody > tr:hover{
+background-color: rgb(225, 225, 225);
+}
+
+.rank-cell > span:first-of-type{
+    margin-right: 10px;
+}
+table img{
+    width: 40px;
+}
+
+
+.coin-name-icon{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 2rem;
+}
+.pos-change{
+    color: rgb(0, 190, 0);
+    font-weight: 700;
+}
+.neg-change{
+    color: red;
+    font-weight: 700;
+}
+
+.loader-parent{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #000000;
+    border-bottom-color: transparent;
+    border-radius: 50%; 
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin: 10px;
+}
+.inactive{
+    display: none;
+}

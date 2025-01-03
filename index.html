@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>CoinStat</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.html"><img src="assets/logo.png" alt="logo"></a>  
+            </div>
+            <div class="fav-btn">
+                <i class="fa-solid fa-star"></i>
+                <a href="./wishlist.html">WishList</a>
+            </div>
+        </nav>
+    </header>
+     <main>
+         <section class="global-overview-container">
+            <h2>Global Market Overview</h2>
+            <div class="loader-parent">
+
+                <div class="loader"></div>
+            </div>
+            <div class="global-sub-container">
+               
+            </div>
+        </section>
+
+        <section class="search-table">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input"  placeholder="Search Coin">
+            </div>
+        </section>
+
+        <section class="coin-list">
+            
+            <table>
+                <thead>
+                    <th>Rank</th>
+                    <th>Coin</th>
+                    <th>Price</th>
+                    <th>24h Change</th>
+                    <th>Market Cap</th>
+                </thead>
+                <tbody class="coin-list-body">
+                </tbody>
+            </table>
+            <div class="pagination-container"></div>
+            <div class="loader-parent">
+                <div class="loader"></div>
+            </div>
+        </section>
+     </main>
+    <script src="./script.js"></script>
+</body>
+</html>
