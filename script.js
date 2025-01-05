@@ -79,7 +79,12 @@ catch(error){
   }
 
   let pageCount = 1;
-  localStorage.setItem('page-count',JSON.stringify(pageCount))
+  if(!localStorage.getItem('page-count')){
+   
+    localStorage.setItem('page-count',JSON.stringify(pageCount))
+  }
+   
+
 
 function renderCoins(coins){
   // console.log(coins)
@@ -152,7 +157,6 @@ function handleWishlist(event,id,item){
 
 }
 
-
 function pagination(coinsData){
   const numberOfBoxes = coinsData.length/50;
   for(let i = 0; i < numberOfBoxes;i++){
@@ -161,10 +165,21 @@ function pagination(coinsData){
     box.id = `page-box-${i+1}`
     box.innerText = i+1;
     paginationContainer.appendChild(box)
+    
+    if(JSON.parse(localStorage.getItem('page-count'))-1 === i){
+       box.classList.add('active')
+      }
 
     box.addEventListener('click',(e) => {
       pageCount = e.target.id.split('-')[2];
+     for(let box of document.getElementsByClassName('page-box')){
+        if(box.className === 'page-box active'){
+          box.classList.remove('active')
+     }
+      }
+      box.classList.add('active')
       localStorage.setItem('page-count',JSON.stringify(pageCount))
+
       renderCoins(coinsData)
     })
   }

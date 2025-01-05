@@ -42,7 +42,7 @@ section{
     margin-top: 1rem;
 }
 .coin_data  img{
-    width: 150px;
+    width: 15vw;
     border-radius: 50%;
 }
 
@@ -68,12 +68,12 @@ section{
 .coin > .name-price{
     display: flex;
     flex-direction: column;
-    font-size: 2.5rem;
+    font-size: 5vw;
     font-weight: 700;
 }
 .price > span{
     padding-left: 1rem;
-    font-size: 1.5rem;
+    font-size: 3vw;
 }
 
 .pos-change{
@@ -107,7 +107,7 @@ list-style-type: none;
  a{
     text-decoration: none;
 }
-.coin-info-left-container  .social-media-links{
+.social-media-links{
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
@@ -171,3 +171,31 @@ list-style-type: none;
         transform: rotate(360deg);
     }
     } 
+
+    @media screen and (max-width : 920px) {
+        .coin-desc-parent{
+            gap: 2rem;
+        }
+    }
+
+    @media screen and (max-width : 770px) {
+        .coin_data{
+            font-size: 2vw !important;
+        }
+       
+        .coin-desc-parent{
+            flex-direction: column;
+        }
+
+    }
+
+    @media screen and (max-width : 500px) {
+        .social-media-links{
+            display: flex;
+            flex-direction: column !important;
+        }
+        .left-card, .right-card{
+            font-size: 12px;
+        }
+        
+    }

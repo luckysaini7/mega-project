@@ -1,8 +1,11 @@
 
 const coinsDataContainer= document.getElementsByClassName('coin-list-body')[0];
 let wishlistData = null
-if(JSON.parse(localStorage.getItem('wishlist-data')).length > 0){
-    wishlistData = JSON.parse(localStorage.getItem('wishlist-data'));
+if((localStorage.getItem('wishlist-data'))){
+  if(JSON.parse(localStorage.getItem('wishlist-data')).length > 0){
+      wishlistData = JSON.parse(localStorage.getItem('wishlist-data'));
+  }
+
 }
 
 if(wishlistData === null){

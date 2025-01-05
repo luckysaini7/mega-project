@@ -51,6 +51,7 @@ table{
     text-align: center;
     border : 2px solid grey;
     border-collapse: collapse;
+    font-size: 1.5vw
 }
 thead{
     border-bottom: 2px solid grey;
@@ -69,7 +70,7 @@ background-color: rgb(225, 225, 225);
     margin-right: 10px;
 }
 table img{
-    width: 40px;
+    width: 2.5vw;
 }
 
 
